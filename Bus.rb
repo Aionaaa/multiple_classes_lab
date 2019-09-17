@@ -28,5 +28,22 @@ class Bus
   end
 
 
+  def pick_up_from_stop(stop)
+    for person in stop.queue
+      @passengers.add_person(person)
+    end
+    index = stop.queue.length
+    while index != 0
+      stop.queue.pop
+      index -= 1
+    end
+
+
+  end
+
+
+
+
+
 
 end
